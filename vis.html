@@ -172,6 +172,23 @@
       font-size: 24px;
       margin-bottom: 8px;
     }
+    .status-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      margin-right: 8px;
+    }
+    .status-badge.operating {
+      background: #DCFCE7;
+      color: #166534;
+    }
+    .status-badge.construction {
+      background: #FEF3C7;
+      color: #92400E;
+    }
     @media (max-width: 768px) {
       .detail-title { font-size: 28px; }
       .info-card-value { font-size: 20px; }
@@ -186,6 +203,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         Volver a opciones
       </a>
+      <span class="status-badge construction">EN CONSTRUCCIÓN</span>
       <div class="detail-tag">OPCIÓN 4</div>
       <h1 class="detail-title">Apartamento VIS · Mazzú</h1>
       <p class="detail-subtitle">Compra de un apartamento VIS en el proyecto Mazzú de Contex, en Caldas (Antioquia, Distrito Primavera), para renta y valorización.</p>

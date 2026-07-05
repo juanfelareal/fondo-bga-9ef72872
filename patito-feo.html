@@ -122,13 +122,20 @@
     }
     .status-badge {
       display: inline-block;
-      background: #FEF3C7;
-      color: #92400E;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       padding: 6px 14px;
       border-radius: 50px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
+      margin-right: 8px;
+    }
+    .status-badge.operating {
+      background: #DCFCE7;
+      color: #166534;
+    }
+    .status-badge.construction {
+      background: #FEF3C7;
+      color: #92400E;
     }
     @media (max-width: 768px) {
       .detail-title { font-size: 28px; }
@@ -144,6 +151,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         Volver a opciones
       </a>
+      <span class="status-badge operating">EN FUNCIONAMIENTO</span>
       <div class="detail-tag">OPCIÓN 3</div>
       <h1 class="detail-title">Patito Feo Stays</h1>
       <p class="detail-subtitle">Oportunidad de inversión en operación hotelera tipo boutique / stays. Proyecto en evaluación por el grupo.</p>
@@ -153,7 +161,6 @@
   <main class="container">
 
     <section class="section">
-      <div class="status-badge">EN EVALUACIÓN</div>
       <div class="section-tag">EL PROYECTO</div>
       <h2>Sobre Patito Feo</h2>
       <p class="section-sub">Proyecto de hospitalidad boutique. Los detalles completos de la inversión están siendo analizados por el grupo.</p>

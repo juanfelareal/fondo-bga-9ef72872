@@ -141,6 +141,23 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
+    .status-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      margin-right: 8px;
+    }
+    .status-badge.operating {
+      background: #DCFCE7;
+      color: #166534;
+    }
+    .status-badge.construction {
+      background: #FEF3C7;
+      color: #92400E;
+    }
     @media (max-width: 768px) {
       .detail-title { font-size: 28px; }
       .info-card-value { font-size: 20px; }
@@ -155,6 +172,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         Volver a opciones
       </a>
+      <span class="status-badge operating">EN FUNCIONAMIENTO</span>
       <div class="detail-tag">OPCIÓN 5</div>
       <h1 class="detail-title">Indie Universe</h1>
       <p class="detail-subtitle">Proyecto de inversión inmobiliaria en Medellín a través de la plataforma LOKL. Oportunidad de participar en desarrollo urbano con ticket de entrada accesible.</p>
