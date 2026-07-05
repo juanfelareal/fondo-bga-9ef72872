@@ -94,6 +94,16 @@ const detailPages = {
   6: 'nido-de-agua.html',
 };
 
+// Map option sort to project status (true = operating, false = construction)
+const projectStatus = {
+  1: true,   // Laureles - en funcionamiento
+  2: false,  // Aldea - en construcción
+  3: true,   // Patito Feo - en funcionamiento
+  4: false,  // Mazzú - en construcción
+  5: true,   // Indie Universe - en funcionamiento
+  6: false,  // Nido de Agua - en construcción
+};
+
 function renderOptions() {
   const total = members.length;
   const counts = {};
@@ -114,10 +124,15 @@ function renderOptions() {
     const pct = total ? (count / total) * 100 : 0;
     const highlights = Array.isArray(o.highlights) ? o.highlights : [];
     const detailPage = detailPages[o.sort] || null;
+    const isOperating = projectStatus[o.sort];
+    const statusBadge = isOperating !== undefined
+      ? `<span class="status-badge ${isOperating ? 'operating' : 'construction'}">${isOperating ? 'EN FUNCIONAMIENTO' : 'EN CONSTRUCCIÓN'}</span>`
+      : '';
 
     return `
     <div class="option-card ${isLeading ? 'leading' : ''}">
       ${isLeading ? '<div class="option-lead-badge">VA GANANDO</div>' : ''}
+      ${statusBadge}
       <div class="option-num">OPCIÓN ${i + 1}</div>
       <div class="option-title">${esc(o.title)}</div>
       <div class="option-desc">${esc(o.description || '')}</div>

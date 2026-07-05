@@ -242,6 +242,23 @@ body {
   border-radius: 50px;
 }
 
+.status-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+.status-badge.operating {
+  background: #DCFCE7;
+  color: #166534;
+}
+.status-badge.construction {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
 .option-num {
   font-size: 12px;
   font-weight: 700;

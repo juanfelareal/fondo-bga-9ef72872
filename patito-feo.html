@@ -120,6 +120,40 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(131, 58, 180, 0.3);
     }
+    .cta-card {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border-radius: var(--radius);
+      padding: 32px;
+      color: #fff;
+      margin: 32px 0;
+    }
+    .cta-card h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .cta-card p {
+      opacity: 0.9;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      color: #1a1a2e;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
     .status-badge {
       display: inline-block;
       font-size: 11px;
@@ -163,7 +197,7 @@
     <section class="section">
       <div class="section-tag">EL PROYECTO</div>
       <h2>Sobre Patito Feo</h2>
-      <p class="section-sub">Proyecto de hospitalidad boutique. Los detalles completos de la inversión están siendo analizados por el grupo.</p>
+      <p class="section-sub">Operación hotelera boutique tipo stays. Experiencia única de hospedaje con concepto diferenciado.</p>
 
       <div class="info-grid">
         <div class="info-card">
@@ -173,27 +207,38 @@
         </div>
         <div class="info-card">
           <div class="info-card-title">Estado</div>
-          <div class="info-card-value">En análisis</div>
-          <div class="info-card-note">Evaluando oportunidad</div>
+          <div class="info-card-value">Operando</div>
+          <div class="info-card-note">En funcionamiento activo</div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="section-tag">POR QUÉ CONSIDERAR</div>
-      <h2">Highlights preliminares</h2>
+      <h2>Highlights</h2>
 
       <ul class="highlight-list">
-        <li>Operación hotelera tipo stays / boutique</li>
-        <li>Presencia activa en redes sociales</li>
-        <li>Información en proceso de análisis por el grupo</li>
+        <li>Operación hotelera tipo stays / boutique activa</li>
+        <li>Presencia digital consolidada (Instagram + sitio web)</li>
+        <li>Concepto diferenciado de hospitalidad</li>
       </ul>
     </section>
 
     <section class="section">
+      <div class="cta-card">
+        <h3>Visita el sitio web oficial</h3>
+        <p>Conoce las cabañas, tarifas y disponibilidad directamente en el sitio de Patito Feo Stays.</p>
+        <a href="https://patitofeostays.com/" target="_blank" rel="noopener" class="cta-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Ver patitofeostays.com
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="section-tag">REDES</div>
-      <h2>Conoce el proyecto</h2>
-      <p class="section-sub">Sigue la cuenta de Instagram para ver la operación y el concepto.</p>
+      <h2>Sigue el proyecto</h2>
+      <p class="section-sub">El equipo documenta la operación en Instagram.</p>
 
       <a href="https://www.instagram.com/patitofeostays/" target="_blank" rel="noopener" class="social-link">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
