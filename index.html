@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Grupo de Inversión Bucaramanga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+</head>
+<body>
+
+  <!-- ======== HERO / SALDO ======== -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-tag">FONDO COLECTIVO · FIDUCUENTA</div>
+      <h1 class="hero-title">Grupo de Inversión<br><span class="accent">Bucaramanga</span></h1>
+
+      <div class="balance-card">
+        <div class="balance-label">Ahorrado hasta el momento</div>
+        <div class="balance-amount" id="balanceAmount">
+          <span class="skeleton">$ ··· ··· ···</span>
+        </div>
+        <div class="balance-meta">
+          <span class="badge-updated" id="balanceUpdated">Cargando…</span>
+          <button class="btn-gear" id="btnEditBalance" title="Actualizar saldo (admin)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ======== INTEGRANTES ======== -->
+    <section class="section">
+      <div class="section-tag">EL EQUIPO</div>
+      <h2>Integrantes</h2>
+      <div class="members-list" id="membersList"></div>
+    </section>
+
+    <!-- ======== VOTACIÓN ======== -->
+    <section class="section">
+      <div class="section-tag">DECISIÓN EN CURSO</div>
+      <h2>¿En qué invertimos?</h2>
+      <p class="section-sub" id="voteProgress">Cargando votación…</p>
+      <div class="options-grid" id="optionsGrid"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Grupo de Inversión Bucaramanga · Página privada del grupo
+    </div>
+  </footer>
+
+  <!-- ======== MODAL: VOTAR ======== -->
+  <div class="modal-overlay" id="voteModal">
+    <div class="modal">
+      <button class="modal-close" data-close>&times;</button>
+      <h3 class="modal-title">Registrar tu voto</h3>
+      <p class="modal-sub">Vas a votar por <strong id="voteOptionName"></strong></p>
+      <label class="field-label" for="voteMember">¿Quién eres?</label>
+      <select id="voteMember" class="field"></select>
+      <label class="field-label" for="votePin">Tu PIN</label>
+      <input type="password" id="votePin" class="field" inputmode="numeric" maxlength="4" placeholder="••••" autocomplete="off">
+      <div class="modal-error" id="voteError"></div>
+      <button class="btn-primary" id="voteSubmit">Confirmar voto</button>
+      <p class="modal-hint">Puedes cambiar tu voto en cualquier momento votando de nuevo.</p>
+    </div>
+  </div>
+
+  <!-- ======== MODAL: ACTUALIZAR SALDO ======== -->
+  <div class="modal-overlay" id="balanceModal">
+    <div class="modal">
+      <button class="modal-close" data-close>&times;</button>
+      <h3 class="modal-title">Actualizar saldo</h3>
+      <p class="modal-sub">Solo el administrador puede actualizar el monto.</p>
+      <label class="field-label" for="balanceInput">Nuevo saldo (COP)</label>
+      <input type="text" id="balanceInput" class="field" inputmode="decimal" placeholder="95.893.532,36" autocomplete="off">
+      <label class="field-label" for="balancePin">PIN de administrador</label>
+      <input type="password" id="balancePin" class="field" inputmode="numeric" maxlength="4" placeholder="••••" autocomplete="off">
+      <div class="modal-error" id="balanceError"></div>
+      <button class="btn-primary" id="balanceSubmit">Actualizar</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

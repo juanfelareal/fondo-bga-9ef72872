@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Aldea (LOKL) · Grupo de Inversión Bucaramanga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>">
+  <style>
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .detail-hero {
+      padding: 48px 0 40px;
+      background: radial-gradient(ellipse 70% 60% at 50% -20%, rgba(22, 48, 94, 0.07), transparent), var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .detail-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--navy);
+      border: 1px solid rgba(22, 48, 94, 0.25);
+      background: var(--bg-card);
+      border-radius: 50px;
+      padding: 7px 18px;
+      margin-bottom: 16px;
+    }
+    .detail-title {
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .detail-subtitle {
+      font-size: 18px;
+      color: var(--text-dim);
+      max-width: 700px;
+      line-height: 1.6;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 32px 0;
+    }
+    .info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+    }
+    .info-card-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+    .info-card-value {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -1px;
+    }
+    .info-card-value small {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-dim);
+    }
+    .info-card-note {
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-top: 8px;
+    }
+    .highlight-list {
+      list-style: none;
+      margin: 24px 0;
+    }
+    .highlight-list li {
+      font-size: 15px;
+      padding: 10px 0 10px 32px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    .highlight-list li:last-child { border-bottom: none; }
+    .highlight-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--navy);
+      font-weight: 800;
+    }
+    .cta-card {
+      background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 100%);
+      border-radius: var(--radius);
+      padding: 32px;
+      color: #fff;
+      margin: 32px 0;
+    }
+    .cta-card h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .cta-card p {
+      opacity: 0.9;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      color: #1a3a2a;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .social-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(131, 58, 180, 0.3);
+    }
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .concept-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+    }
+    .concept-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .concept-title {
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .concept-desc {
+      font-size: 13px;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+    .quote-card {
+      background: var(--navy-tint);
+      border-left: 4px solid var(--navy);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 24px 28px;
+      margin: 32px 0;
+    }
+    .quote-text {
+      font-size: 20px;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+    }
+    .quote-source {
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-top: 12px;
+    }
+    @media (max-width: 768px) {
+      .detail-title { font-size: 28px; }
+      .info-card-value { font-size: 22px; }
+      .quote-text { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="detail-hero">
+    <div class="container">
+      <a href="index.html" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver a opciones
+      </a>
+      <div class="detail-tag">OPCIÓN 2</div>
+      <h1 class="detail-title">Aldea · Wellness Farm</h1>
+      <p class="detail-subtitle">Inversión en proyecto eco-turístico de tiny houses y farm stay a través de la plataforma LOKL. "Volver al campo se convirtió en el nuevo lujo."</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section">
+      <div class="section-tag">EL CONCEPTO</div>
+      <h2>¿Qué es Aldea?</h2>
+
+      <div class="quote-card">
+        <div class="quote-text">"Volver al campo se convirtió en el nuevo lujo en el que todos quieren vivir."</div>
+        <div class="quote-source">— Project Aldea</div>
+      </div>
+
+      <p class="section-sub">Aldea es un proyecto de hospitalidad sostenible que combina tiny houses, agricultura regenerativa y bienestar en un entorno natural. La inversión se realiza a través de LOKL, una plataforma de inversión inmobiliaria fraccionada.</p>
+
+      <div class="concept-grid">
+        <div class="concept-card">
+          <div class="concept-icon">🏡</div>
+          <div class="concept-title">Tiny Houses</div>
+          <div class="concept-desc">Cabañas diseñadas para reconectar con la naturaleza</div>
+        </div>
+        <div class="concept-card">
+          <div class="concept-icon">🌱</div>
+          <div class="concept-title">Farm Stay</div>
+          <div class="concept-desc">Experiencia de granja con animales y cultivos</div>
+        </div>
+        <div class="concept-card">
+          <div class="concept-icon">🧘</div>
+          <div class="concept-title">Wellness</div>
+          <div class="concept-desc">Bienestar físico y mental en el campo</div>
+        </div>
+        <div class="concept-card">
+          <div class="concept-icon">☕</div>
+          <div class="concept-title">Zona Cafetera</div>
+          <div class="concept-desc">Paisajes de montaña y cultivos de café</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-tag">POR QUÉ INVERTIR</div>
+      <h2>Highlights</h2>
+
+      <ul class="highlight-list">
+        <li>Turismo sostenible en crecimiento exponencial post-pandemia</li>
+        <li>Comunidad activa: 34K+ seguidores en Instagram</li>
+        <li>Ticket de entrada flexible a través de LOKL (inversión fraccionada)</li>
+        <li>Equipo con experiencia en hospitalidad y desarrollo inmobiliario</li>
+        <li>Ubicación en zona cafetera colombiana (paisaje Patrimonio UNESCO)</li>
+        <li>Modelo de negocio probado en otros países (glamping + farm stay)</li>
+      </ul>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-card-title">Comunidad</div>
+          <div class="info-card-value">34K+ <small>seguidores</small></div>
+          <div class="info-card-note">En Instagram (@aldea.life)</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">Plataforma</div>
+          <div class="info-card-value">LOKL</div>
+          <div class="info-card-note">Inversión inmobiliaria fraccionada</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title">Modelo</div>
+          <div class="info-card-value">Wellness Farm</div>
+          <div class="info-card-note">Tiny houses + farm stay + experiencias</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cta-card">
+        <h3>Conoce todos los detalles en LOKL</h3>
+        <p>En el dashboard de LOKL encontrarás información completa sobre el proyecto: ubicación exacta, renders, proyecciones financieras, equipo y cómo invertir.</p>
+        <a href="https://dashboard.lokl.life/project-signup/aldea" target="_blank" rel="noopener" class="cta-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Ver proyecto en LOKL
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-tag">REDES</div>
+      <h2>Sigue el proyecto</h2>
+      <p class="section-sub">El equipo de Aldea documenta todo el proceso de desarrollo en sus redes.</p>
+
+      <a href="https://www.instagram.com/aldea.life/" target="_blank" rel="noopener" class="social-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @aldea.life
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="index.html" style="color: var(--navy); text-decoration: none; font-weight: 600;">← Volver a opciones de inversión</a>
+    </div>
+  </footer>
+
+</body>
+</html>
