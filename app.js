@@ -105,7 +105,7 @@ const projectStatus = {
 // Map option sort to project image (real project photos)
 const projectImages = {
   1: 'https://casa-fiora-laureles.medellin-hotels.com/data/Photos/OriginalPhoto/17088/1708863/1708863804.JPEG', // Casa Fiora Laureles
-  2: 'https://lokl-assets.s3.us-east-1.amazonaws.com/lokl-marketing/Aldea_5%2B(1).png', // Aldea
+  2: 'https://lokl-assets.s3.us-east-1.amazonaws.com/lokl-marketing/IMG_7118%2B(1).jpg', // Aldea
   3: 'https://patitofeostays.com/wp-content/uploads/2024/12/DSC_2647-HDR-Editar.jpg', // Patito Feo
   4: 'https://s3.amazonaws.com/cdn.contex.com.co/wp-content/uploads/Mazzu-Caldas-Spa.jpg', // Mazzú
   5: 'https://lokl-assets.s3.us-east-1.amazonaws.com/home/Hero-indie-movil.png', // Indie Universe
