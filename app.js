@@ -69,8 +69,6 @@ function renderBalance() {
   const { grouped, decimals } = fmtCOP(fund.balance);
   document.getElementById('balanceAmount').innerHTML =
     `$${grouped}<span class="decimals">,${decimals}</span>`;
-  document.getElementById('balanceUpdated').textContent =
-    `Actualizado el ${fmtDate(fund.updated_at)}`;
 }
 
 function renderMembers() {
