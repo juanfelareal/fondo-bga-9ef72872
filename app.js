@@ -102,6 +102,16 @@ const projectStatus = {
   6: false,  // Nido de Agua - en construcción
 };
 
+// Map option sort to project image
+const projectImages = {
+  1: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=250&fit=crop', // Hotel boutique
+  2: 'https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=400&h=250&fit=crop', // Tiny house / farm
+  3: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=250&fit=crop', // Boutique stays
+  4: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=250&fit=crop', // Modern apartment
+  5: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=250&fit=crop', // Urban development
+  6: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=400&h=250&fit=crop', // Nature retreat
+};
+
 function renderOptions() {
   const total = members.length;
   const counts = {};
@@ -126,10 +136,13 @@ function renderOptions() {
     const statusBadge = isOperating !== undefined
       ? `<span class="status-badge ${isOperating ? 'operating' : 'construction'}">${isOperating ? 'EN FUNCIONAMIENTO' : 'EN CONSTRUCCIÓN'}</span>`
       : '';
+    const projectImage = projectImages[o.sort] || '';
 
     return `
     <div class="option-card ${isLeading ? 'leading' : ''}">
       ${isLeading ? '<div class="option-lead-badge">VA GANANDO</div>' : ''}
+      ${projectImage ? `<div class="option-image"><img src="${projectImage}" alt="${esc(o.title)}" loading="lazy"></div>` : ''}
+      <div class="option-content">
       ${statusBadge}
       <div class="option-num">OPCIÓN ${i + 1}</div>
       <div class="option-title">${esc(o.title)}</div>
@@ -148,6 +161,7 @@ function renderOptions() {
             : '<span class="no-votes">Aún sin votos</span>'}
         </div>
         <button class="btn-vote" data-option-id="${o.id}" data-option-title="${esc(o.title)}">Votar por esta opción</button>
+      </div>
       </div>
     </div>`;
   }).join('');
