@@ -296,6 +296,43 @@ body {
   margin-bottom: 10px;
 }
 
+.investment-badge {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, var(--navy-tint), #E8F4FD);
+  border: 1px solid rgba(22, 48, 94, 0.15);
+  border-radius: 12px;
+}
+.investment-badge.pending {
+  background: var(--bg);
+  border-color: var(--border);
+}
+.investment-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.investment-amount {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: var(--navy);
+}
+.investment-note {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--navy);
+  background: rgba(22, 48, 94, 0.1);
+  padding: 3px 8px;
+  border-radius: 50px;
+  margin-left: 4px;
+}
+
 .option-desc {
   font-size: 13.5px;
   line-height: 1.55;

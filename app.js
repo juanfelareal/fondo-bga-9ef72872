@@ -102,6 +102,16 @@ const projectStatus = {
   6: false,  // Nido de Agua - en construcción
 };
 
+// Map option sort to investment amount (COP)
+const investmentAmounts = {
+  1: { amount: 13500000, label: 'Entrada' },           // Laureles - participación de socio
+  2: { amount: 500000, label: 'Desde', note: 'LOKL' }, // Aldea - inversión fraccionada
+  3: { amount: null, label: 'Por definir' },           // Patito Feo - en análisis
+  4: { amount: 265200000, label: 'Desde' },            // Mazzú VIS
+  5: { amount: 5400000, label: 'Ticket', note: 'LOKL' }, // Indie Universe
+  6: { amount: 500000, label: 'Desde', note: 'LOKL' }, // Nido de Agua - inversión fraccionada
+};
+
 // Map option sort to project image (real project photos)
 const projectImages = {
   1: 'https://casa-fiora-laureles.medellin-hotels.com/data/Photos/OriginalPhoto/17088/1708863/1708863804.JPEG', // Casa Fiora Laureles
@@ -137,6 +147,20 @@ function renderOptions() {
       ? `<span class="status-badge ${isOperating ? 'operating' : 'construction'}">${isOperating ? 'EN FUNCIONAMIENTO' : 'EN CONSTRUCCIÓN'}</span>`
       : '';
     const projectImage = projectImages[o.sort] || '';
+    const investment = investmentAmounts[o.sort];
+    const investmentHtml = investment ? (() => {
+      if (investment.amount) {
+        const { grouped } = fmtCOP(investment.amount);
+        return `<div class="investment-badge">
+          <span class="investment-label">${investment.label}</span>
+          <span class="investment-amount">$${grouped}</span>
+          ${investment.note ? `<span class="investment-note">${investment.note}</span>` : ''}
+        </div>`;
+      }
+      return `<div class="investment-badge pending">
+        <span class="investment-label">${investment.label}</span>
+      </div>`;
+    })() : '';
 
     return `
     <div class="option-card ${isLeading ? 'leading' : ''}">
@@ -146,6 +170,7 @@ function renderOptions() {
       ${statusBadge}
       <div class="option-num">OPCIÓN ${i + 1}</div>
       <div class="option-title">${esc(o.title)}</div>
+      ${investmentHtml}
       <div class="option-desc">${esc(o.description || '')}</div>
       ${highlights.length ? `<ul class="option-highlights">${highlights.map(h => `<li>${esc(h)}</li>`).join('')}</ul>` : ''}
       ${detailPage ? `<a class="option-link" href="${detailPage}">Ver información completa →</a>` : ''}
