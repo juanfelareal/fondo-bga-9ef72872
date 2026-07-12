@@ -102,14 +102,14 @@ const projectStatus = {
   6: false,  // Nido de Agua - en construcción
 };
 
-// Map option sort to project image
+// Map option sort to project image (real project photos)
 const projectImages = {
-  1: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=250&fit=crop', // Hotel boutique
-  2: 'https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=400&h=250&fit=crop', // Tiny house / farm
-  3: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=250&fit=crop', // Boutique stays
-  4: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=250&fit=crop', // Modern apartment
-  5: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=250&fit=crop', // Urban development
-  6: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=400&h=250&fit=crop', // Nature retreat
+  1: 'https://casa-fiora-laureles.medellin-hotels.com/data/Photos/OriginalPhoto/17088/1708863/1708863804.JPEG', // Casa Fiora Laureles
+  2: 'https://lokl-assets.s3.us-east-1.amazonaws.com/lokl-marketing/Aldea_5%2B(1).png', // Aldea
+  3: 'https://patitofeostays.com/wp-content/uploads/2024/12/DSC_2647-HDR-Editar.jpg', // Patito Feo
+  4: 'https://s3.amazonaws.com/cdn.contex.com.co/wp-content/uploads/Mazzu-Caldas-Spa.jpg', // Mazzú
+  5: 'https://lokl-assets.s3.us-east-1.amazonaws.com/home/Hero-indie-movil.png', // Indie Universe
+  6: 'https://cdn.prod.website-files.com/65eb27038e864e34c8514f01/662fe345edceb725ce70f790_pexels-ehsan-haque-17873737%201.png', // Nido de Agua
 };
 
 function renderOptions() {
