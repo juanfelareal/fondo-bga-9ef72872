@@ -104,12 +104,12 @@ const projectStatus = {
 
 // Map option sort to investment amount (COP)
 const investmentAmounts = {
-  1: { amount: 13500000, label: 'Entrada' },           // Laureles - participación de socio
-  2: { amount: 500000, label: 'Desde', note: 'LOKL' }, // Aldea - inversión fraccionada
-  3: { amount: null, label: 'Por definir' },           // Patito Feo - en análisis
-  4: { amount: 265200000, label: 'Desde' },            // Mazzú VIS
-  5: { amount: 5400000, label: 'Ticket', note: 'LOKL' }, // Indie Universe
-  6: { amount: 500000, label: 'Desde', note: 'LOKL' }, // Nido de Agua - inversión fraccionada
+  1: { amount: 13500000, label: 'Entrada' },              // Laureles - participación de socio
+  2: { amount: null, label: 'Consultar en LOKL' },        // Aldea - inversión fraccionada
+  3: { amount: null, label: 'Por definir' },              // Patito Feo - en análisis
+  4: { amount: 265200000, label: 'Desde' },               // Mazzú VIS
+  5: { amount: 5400000, label: 'Ticket', note: 'LOKL' },  // Indie Universe
+  6: { amount: null, label: 'Consultar en LOKL' },        // Nido de Agua - inversión fraccionada
 };
 
 // Map option sort to project image (real project photos)
